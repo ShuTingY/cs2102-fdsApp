@@ -1329,11 +1329,11 @@ INSERT INTO Shifts (shift_id,start_time1,start_time2,end_time1,end_time2) VALUES
 INSERT INTO Shifts (shift_id,start_time1,start_time2,end_time1,end_time2) VALUES (4,'13:00','18:00','17:00','22:00');
 
 
-insert into Mws (usr_id, day, shift_id) values ('FJlGy8yKsR', 6, 1);
-insert into Mws (usr_id, day, shift_id) values ('FJlGy8yKsR', 2, 1);
-insert into Mws (usr_id, day, shift_id) values ('FJlGy8yKsR', 3, 1);
-insert into Mws (usr_id, day, shift_id) values ('FJlGy8yKsR', 4, 1);
-insert into Mws (usr_id, day, shift_id) values ('FJlGy8yKsR', 5, 1);
+insert into Mws (usr_id, day, shift_id) values ('KsK1EzaX6', 6, 1);
+insert into Mws (usr_id, day, shift_id) values ('KsK1EzaX6', 2, 1);
+insert into Mws (usr_id, day, shift_id) values ('KsK1EzaX6', 3, 1);
+insert into Mws (usr_id, day, shift_id) values ('KsK1EzaX6', 4, 1);
+insert into Mws (usr_id, day, shift_id) values ('KsK1EzaX6', 5, 1);
 insert into Mws (usr_id, day, shift_id) values ('TgYG4Z7NIq', 1, 2);
 insert into Mws (usr_id, day, shift_id) values ('TgYG4Z7NIq', 2, 2);
 insert into Mws (usr_id, day, shift_id) values ('TgYG4Z7NIq', 3, 2);

@@ -8,7 +8,7 @@ customer.queries = {
     get_pendingReview: "SELECT order_id, (select rname FROM restaurants WHERE orders.res_id = restaurants.res_id), place_order_time FROM orders JOIN deliveries Using (order_id) WHERE order_id NOT IN (SELECT order_id FROM reviews) AND orders.status = 'complete' AND orders.usr_id = $1 AND NOW()::DATE -place_order_time::DATE <= 30 AND NOW()::DATE - place_order_time::DATE >=0 ORDER BY place_order_time DESC",
     get_address:"SELECT address , postal_code FROM Customers_address WHERE usr_id = $1 ORDER BY last_use_time DESC",
     get_coupons:"SELECT coupon_id, description, expiry_date, is_used FROM Coupons NATURAL JOIN coupongroups WHERE usr_id = $1",
-    get_usable_coupons:'SELECT coupon_id, description FROM Coupons NATURAL JOIN coupongroups WHERE usr_id = $1 AND NOT is_used',
+    get_usable_coupons:'SELECT coupon_id, description FROM Coupons NATURAL JOIN coupongroups WHERE usr_id = $1 AND NOT is_used AND expiry_date > now()',
     get_profile: "SELECT card_num ,reward_points FROM Customers WHERE usr_id = $1",
     get_cart: 'SELECT res_id, (SELECT rname FROM Restaurants where res_id = cartitems.res_id) as rname,(SELECT min_amount FROM Restaurants where res_id = cartitems.res_id) as min_amount, food_id, (SELECT name FROM menuitems where food_id = cartitems.food_id and res_id = cartitems.res_id) as foodname, qty, (SELECT price FROM MenuItems WHERE res_id = cartitems.res_id and food_id=cartitems.food_id)as price FROM cartitems WHERE usr_id = $1',
     get_cart_for_backend:'SELECT res_id, food_id, qty FROM cartitems WHERE usr_id = $1',
