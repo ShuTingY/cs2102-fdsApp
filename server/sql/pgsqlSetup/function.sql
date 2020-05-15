@@ -220,4 +220,3 @@ RETURNS setof RiderInfo AS $$
 
     END;
 $$ LANGUAGE plpgsql;
-
